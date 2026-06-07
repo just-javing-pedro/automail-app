@@ -1,0 +1,131 @@
+-=-=-=-= LOGIN -=-=-=-=
+
+requests username/email  
+requests password  
+
+if everything is filled:
+    checks if username/email exists:
+        if yes:
+            checks if password is correct:
+                if yes:
+                    enters the account
+                else:
+                    warns that some information is incorrect        
+    else:
+        warns that some information is incorrect
+else:
+    warns that fields are required
+
+-=-=-=-= RECOVERY -=-=-=-=
+
+"forgot password" button pressed --> opens recovery window stage 1
+
+requests account email  
+if has email:
+    if email exists:
+        sends a code to the email, using a specialized email for this
+        changes window to stage 2 (code)
+        requests code
+
+        if code exists:
+            if code is correct:
+                changes window to stage 3 (new password)
+                requests new password
+                if has new password:
+                    if password is not the same as the old one:
+                        changes password
+                        opens recovery success window
+                    else:
+                        warns on button that it is the current password
+                else:
+                    warns on button that it is required
+
+            else:
+                warns on button that the code is not correct
+
+        else:
+            warns on button that it is required
+
+    else:
+        warns on button that there are no accounts registered with this email
+
+else:
+    warns on button that it is required
+
+-=-=-=-= SIGNUP -=-=-=-=
+
+requests name  
+requests username  
+requests email  
+requests password  
+requests password confirmation  
+
+if everything is filled:
+    checks if password confirmation is correct
+    if it is:
+        checks if username or email already exists
+        if it already exists:
+            warns that the account already exists
+        else:
+            creates an account with the provided data
+            opens a success window: enter account or close window
+            if enter:
+                opens the -=-=-=-= MAIN -=-=-=-=
+            else:
+                closes everything
+    else:
+        warns that the password is not correct
+
+else:
+    warns that fields are required
+
+-=-=-=-= MAIN -=-=-=-=
+
+requests sender name (who sends)  
+requests sender email  
+requests key  
+requests recipient (who receives)  
+
+requests message title  
+requests message content  
+
+when sending:
+    checks if everything is filled
+    if yes:
+        sends the email
+        if there is an error:
+            shows error on button
+            waits 1s
+            button returns to normal
+        else:
+            shows success message
+            disables button
+            waits 10s (cooldown)
+            enables button
+    else:
+        warns on button
+        waits 1s 
+        button returns to normal
+
+if menu opens:
+    global where_am_i_main_menu
+    shows: Send Email; Inbox; Preferences; Settings; Credits (NOT A BUTTON!); semi-invisible button to exit menu
+
+    if Send Email is pressed:
+        closes menu automatically
+        changes variable where_am_i_main_menu to "send email"
+        changes main mode
+    if Inbox is pressed:
+        closes menu automatically
+        changes variable where_am_i_main_menu to "inbox"
+        changes main mode
+    if Preferences is pressed:
+        closes menu automatically
+        changes variable where_am_i_main_menu to "preferences"
+        changes main mode
+    if Settings is pressed:
+        closes menu automatically
+        changes variable where_am_i_main_menu to "settings"
+        changes main mode
+    if closed:
+        closes menu (of course)

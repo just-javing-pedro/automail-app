@@ -1,0 +1,325 @@
+/*
+
+[----------- DARK PALETTE -----------]
+
+rgb(19, 19, 19) -> window
+rgb(25, 25, 25) -> main
+rgb(30, 30, 30) -> border
+rgb(160, 160, 160) -> placeholder
+rgb(35, 35, 35) -> hover
+rgb(65, 65, 65) -> active
+rgb(22, 22, 22) -> disabled
+
+rgb(225, 225, 225) -> text main / active  button border
+rgb(200, 200, 200) -> text disabled
+
+[------------------------------------]
+
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+[----------- WHITE PALETTE -----------]
+
+rgb(235, 235, 235) -> window
+rgb(225, 225, 225) -> main
+rgb(200, 200, 200) -> border
+rgb(160, 160, 160) -> placeholder
+rgb(215, 215, 215) -> hover
+rgb(195, 195, 195) -> active
+rgb(193, 193, 193) -> disabled
+
+rgb(19, 19, 19) -> text main / active  button border
+rgb(70, 70, 70) -> text disabled
+
+
+[-------------------------------------]
+
+*/
+
+
+/* -=-=-=-= WINDOW -=-=-=-= */
+
+.dark-background {
+    background-color: rgb(19, 19, 19);
+}
+
+.white-background {
+    background-color: rgb(235, 235, 235);
+}
+
+/* -=-=-=-= TEXT -=-=-=-= */
+
+.dark-background label {
+    background-color: transparent;
+    background-image: none;
+    color: rgb(225, 225, 225);
+}
+
+.white-background label {
+    background-color: transparent;
+    background-image: none;
+    color: rgb(19, 19, 19);
+}
+
+/* -=-=-=-= BUTTON -=-=-=-= */
+
+/* -- WHITE -- */
+
+.white-background-button {
+    background-color: rgb(225, 225, 225);
+    background-image: none;
+
+    border: 1px solid rgb(200, 200, 200);
+}
+
+.white-background-button label {
+    color: rgb(19, 19, 19);
+    background-color: transparent;
+}
+
+.white-background-button:hover {
+    background-color: rgb(215, 215, 215);
+}
+
+.white-background-button:active {
+    background-color: rgb(195, 195, 195);
+}
+
+.white-background-button:disabled {
+    background-color: rgb(208, 208, 208);
+}
+
+.white-background-button:disabled label {
+    color: rgb(70, 70, 70);
+}
+
+/* -- DARK -- */
+
+.dark-background-button {
+    background-color: rgb(25, 25, 25);
+    background-image: none;
+
+    border: 1px solid rgb(30, 30, 30);
+}
+
+.dark-background-button label {
+    color: rgb(225, 225, 225);
+    background-color: transparent;
+}
+
+.dark-background-button:hover {
+    background-color: rgb(35, 35, 35);
+}
+
+.dark-background-button:active {
+    background-color: rgb(65, 65, 65);
+}
+
+.dark-background-button:disabled {
+    background-color: rgb(22, 22, 22);
+}
+
+.dark-background-button:disabled label {
+    color: rgb(200, 200, 200);
+}
+
+/* -=-=-=-= ENTRY -=-=-=-= */
+
+/* -- WHITE -- */
+
+.white-background entry {
+    background-color: rgb(225, 225, 225);
+    background-image: none;
+    color: rgb(19, 19, 19);
+
+    border: 1px solid rgb(200, 200, 200);
+}
+
+.white-background entry placeholder {
+    color: rgb(160, 160, 160);
+}
+
+/* -- DARK -- */
+
+.dark-background entry {
+    background-color: rgb(25, 25, 25);
+    background-image: none;
+    color: rgb(225, 225, 225);
+
+    border: 1px solid rgb(30, 30, 30);
+}
+
+.dark-background entry placeholder {
+    color: rgb(160, 160, 160);
+}
+
+
+/* -=-=-=-= TEXTVIEW -=-=-=-= */
+
+/* -- WHITE -- */
+
+.white-background textview text {
+    background-color: rgb(225, 225, 225);
+    color: rgb(19, 19, 19);
+    background-image: none;
+}
+
+.white-background textview {
+    caret-color: rgb(19, 19, 19);
+
+    background-color: rgb(225, 225, 225);
+    color: rgb(19, 19, 19);
+    background-image: none;
+}
+
+/* -- DARK -- */
+
+.dark-background textview text {
+    background-color: rgb(25, 25, 25);
+    color: rgb(225, 225, 225);
+    background-image: none;
+}
+
+.dark-background textview {
+    caret-color: rgb(225, 225, 225);
+
+    background-color: rgb(25, 25, 25);
+    color: rgb(225, 225, 225);
+    background-image: none;
+}
+/* -=-=-=-= SCROLLEDWINDOW -=-=-=-= */
+
+/* -- WHITE -- */
+
+.white-background scrolledwindow {
+    border: 1px solid rgb(200, 200, 200);
+}
+
+/* -- DARK -- */
+
+.dark-background scrolledwindow {
+    border: 1px solid rgb(30, 30, 30);
+}
+
+/* -=-=-=-= COMBOBOXTEXT -=-=-=-= */
+
+/* -- WHITE -- */
+
+.white-background combobox {
+    background-color: rgb(225, 225, 225);
+    background-image: none;
+}
+
+.white-background combobox button * {
+    background-color: rgb(225, 225, 225);
+    color: rgb(19, 19, 19);
+}
+
+.white-background combobox button {
+    background-color: rgb(225, 225, 225);
+    color: rgb(19, 19, 19);
+    border: 1px solid rgb(200, 200, 200);
+}
+
+.white-background combobox cellview {
+    color: rgb(19, 19, 19)
+}
+
+
+/* -- DARK -- */
+
+.dark-background combobox {
+    background-color: rgb(25, 25, 25);
+    background-image: none;
+}
+
+.dark-background combobox button * {
+    background-color: rgb(25, 25, 25);
+    color: rgb(225, 225, 225);
+}
+
+.dark-background combobox button {
+    background-color: rgb(25, 25, 25);
+    color: rgb(225, 225, 225);
+    border: 1px solid rgb(30, 30, 30);
+}
+
+.dark-background combobox cellview {
+    color: rgb(225, 225, 225)
+}
+
+/* -=-=-=-= MENU ITEM -=-=-=-= */
+
+/* --  WHITE -- */
+
+.white-background menu {
+    background-color: rgb(225, 225, 225);
+    background-image: none;
+
+    border: 1px solid rgb(200, 200, 200);
+}
+
+.white-background menu item {
+    background-color: rgb(225, 225, 225);
+    background-image: none;
+    color: rgb(19, 19, 19);
+}
+
+.white-background menu item:hover {
+    background-color: rgb(215, 215, 215);
+}
+
+/* -- DARK -- */
+
+.dark-background menu {
+    background-color: rgb(25, 25, 25);
+    background-image: none;
+
+    border: 1px solid rgb(30, 30, 30);
+}
+
+.dark-background menu item {
+    background-color: rgb(25, 25, 25);
+    color: rgb(225, 225, 225);
+    background-image: none;
+}
+
+.dark-background menu item:hover {
+    background-color: rgb(35, 35, 35);
+}
+
+
+/* -=-=-=-= MENU BOX -=-=-=-= */
+
+.white-menu-box-main {
+    background-color: rgb(225, 225, 225);
+}
+
+.dark-menu-box-main {
+    background-color: rgb(25, 25, 25);
+}
+
+/* -=-=-=-= CLOSE MENU -=-=-=-= */
+
+.close-menu {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.close-menu.enabled:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* -=-=-=-= MENU UTILITIES -=-=-=-= */
+
+.menu-active-bt-white {
+    border-color: rgb(19, 19, 19);
+    transition: all 0.2s ease;
+}
+
+.menu-active-bt-dark {
+    border-color: rgb(225, 225, 225);
+    transition: all 0.2s ease;
+}
