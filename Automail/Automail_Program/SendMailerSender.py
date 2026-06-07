@@ -7,7 +7,7 @@ Receiver_email = None
 Subject = None
 Content = None
 
-def receber_valores(sender_email,  sender_name, receiver_email, subject, content, key):
+def receive_values(sender_email,  sender_name, receiver_email, subject, content, key):
     global Sender_email, Sender_name, Receiver_email, Subject, Content, API, ms
 
     Sender_email = sender_email
@@ -37,7 +37,7 @@ def main():
         print(response)
     except Exception as e:
         print(e)
-        app.erro_email(e)
+        app.email_error(e)
 
     
 if __name__ == "__main__":
