@@ -4,7 +4,7 @@ import app
 import random as r
 
 
-def receber_valores(sender_email, sender_password, receiver_email, subject, content, IsRecovery):
+def receive_values(sender_email, sender_password, receiver_email, subject, content, IsRecovery):
     global Content, Sender_password, Sender_email, VerificationCode
 
     VerificationCode = r.randint(100000, 999999)
@@ -26,7 +26,7 @@ def receber_valores(sender_email, sender_password, receiver_email, subject, cont
 
     main()
 
-def VerificarCodigo(code):
+def VerifyCode(code):
     if int(code) == VerificationCode:
         return True
     else:
