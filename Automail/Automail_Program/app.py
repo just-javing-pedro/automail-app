@@ -24,7 +24,8 @@ from gi.repository import Gtk, Gdk
 from gi.repository import GLib
 
 css = Gtk.CssProvider()
-css.load_from_path("./style.css")
+css_path = os.path.join(os.path.dirname(__file__), "style.css")
+css.load_from_path(css_path)
 Gtk.StyleContext.add_provider_for_screen(
     Gdk.Screen.get_default(),
     css,
@@ -40,11 +41,12 @@ def erro_email(erro):
 
 
 builder = Gtk.Builder()
-builder.add_from_file("../Automail_UI/Interface.glade")
+builder_path = os.path.join(os.path.dirname(__file__), "../Automail_UI/Interface.glade")
+builder.add_from_file(builder_path)
 
 # PASTAS
 
-pics_folder = "../Automail_UI/pics"
+pics_folder = os.path.join(os.path.dirname(__file__), "../Automail_UI/pics") 
 
 # JANELAS
 
